@@ -16,7 +16,6 @@ const az = 'abcdefghijklmnopqrstuvwxyz'
 const AZ = az.toUpperCase()
 
 function getRandomChar(chars) {
-  console.log(chars)
   switch (chars) {
     // English
     case '[en]':
