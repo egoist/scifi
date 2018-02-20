@@ -1,0 +1,41 @@
+{
+  "name": "scifi",
+  "version": "0.0.0",
+  "description": "Shuffle Randomly Characters.",
+  "repository": {
+    "url": "egoist/scifi",
+    "type": "git"
+  },
+  "main": "dist/scifi.cjs.js",
+  "module": "dist/scifi.es.js",
+  "unpkg": "dist/scifi.js",
+  "jsdelivr": "dist/scifi.js",
+  "cdn": "dist/scifi.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "npm run lint && echo 'no tests!'",
+    "lint": "xo",
+    "prepublishOnly": "npm run build",
+    "build": "bili --format cjs,umd,es"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "bili": "^2.2.7",
+    "eslint-config-rem": "^3.0.0",
+    "poi": "^9.6.13",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "ignores": [
+      "example/**"
+    ],
+    "rules": {
+      "unicorn/filename-case": "off"
+    }
+  }
+}
