@@ -8,6 +8,10 @@
 
 Check out the [documentation and examples](https://scifi.egojump.com).
 
+## Prior art
+
+Thanks to the inspirations from [chaffle](https://github.com/blivesta/chaffle/).
+
 ## Contributing
 
 1. Fork it!
