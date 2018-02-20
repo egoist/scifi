@@ -47,13 +47,13 @@ The characters where we get random char, it supports keywords like `[en]`.
 The list of keywords:
 
 - `[en]`: All English characters including punctuation marks.
-- `[kanji]`: Japanee kanji.
+- `[kanji]`: Japanese kanji.
 - `[hiragana]`: Japanese hiragana.
 - `[katakana]`: Japanese katakana.
 - `[ua]`: Ukrainian.
 - `[a-z]`: Characters from `a` to `z`.
 - `[A-Z]`: Characters from `A` to `Z`.
-- `[a-zA-Z]`: Characters from `a` to `z` ands `A` to `Z`.
+- `[a-zA-Z]`: Characters from `a` to `z` and `A` to `Z`.
 
 ##### options.content
 
