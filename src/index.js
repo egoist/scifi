@@ -16,9 +16,8 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
   const randomTimer = setInterval(() => {
     let randomString = ''
     for (let i = 0; i < content.length - finishedString.length; i++) {
-      const char = content[i + finishedString.length]
       // Ignore space
-      randomString += char === ' ' ? ' ' : getRandomChar(chars)
+      randomString += content[i + finishedString.length] === ' ' ? ' ' : getRandomChar(chars)
     }
     el.textContent = finishedString + randomString
 
