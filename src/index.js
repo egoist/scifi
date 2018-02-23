@@ -10,7 +10,7 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
   let finishedString = ''
 
   const finishedTimer = setInterval(() => {
-    finishedString += content[finishedString.length]
+    finishedString += content[finishedString.length] || ''
   }, delay)
 
   const randomTimer = setInterval(() => {
