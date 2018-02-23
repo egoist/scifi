@@ -18,7 +18,8 @@
     "test": "npm run lint && echo 'no tests!'",
     "lint": "xo",
     "prepublishOnly": "npm run build",
-    "build": "bili --format cjs,umd,es"
+    "build": "bili --format cjs,umd,es",
+    "example": "poi example/index.js"
   },
   "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
