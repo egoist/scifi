@@ -9,6 +9,15 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
   el.setAttribute(ATTR, true)
   let finishedString = ''
 
+  const randomTimer = setInterval(() => {
+    let randomString = ''
+    for (let i = 0; i < content.length - finishedString.length; i++) {
+      // Ignore space
+      randomString += content[i + finishedString.length] === ' ' ? ' ' : getRandomChar(chars)
+    }
+    el.textContent = finishedString + randomString
+  }, speed)
+
   const finishedTimer = setInterval(() => {
     if (finishedString.length < content.length) {
       finishedString += content[finishedString.length]
@@ -18,15 +27,6 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
       el.removeAttribute(ATTR)
     }
   }, delay)
-
-  const randomTimer = setInterval(() => {
-    let randomString = ''
-    for (let i = 0; i < content.length - finishedString.length; i++) {
-      // Ignore space
-      randomString += content[i + finishedString.length] === ' ' ? ' ' : getRandomChar(chars)
-    }
-    el.textContent = finishedString + randomString
-  }, speed)
 }
 
 export default scifi
