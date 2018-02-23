@@ -54,4 +54,12 @@ function getRandomChar(chars) {
   }
 }
 
-export default getRandomChar
+function toScifiText(chars, text, keepChars) {
+  let retChars = ''
+  for (let i = 0; i < text.length; i++) {
+    retChars += keepChars.includes(text[i]) ? text[i] : getRandomChar(chars)
+  }
+  return retChars
+}
+
+export default toScifiText
