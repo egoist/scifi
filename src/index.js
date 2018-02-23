@@ -7,23 +7,21 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
 
   content = content || el.textContent
   el.setAttribute(ATTR, true)
-  let finished = 0
   let finishedString = ''
 
   const finishedTimer = setInterval(() => {
-    finishedString += content[finished++]
+    finishedString += content[finishedString.length]
   }, delay)
 
   const randomTimer = setInterval(() => {
     let randomString = ''
-    for (let i = 0; i < content.length - finished; i++) {
-      const char = content[i + finished]
+    for (let i = 0; i < content.length - finishedString.length; i++) {
       // Ignore space
-      randomString += char === ' ' ? ' ' : getRandomChar(chars)
+      randomString += content[i + finishedString.length] === ' ' ? ' ' : getRandomChar(chars)
     }
     el.textContent = finishedString + randomString
 
-    if (finished === content.length) {
+    if (finishedString.length === content.length) {
       clearInterval(finishedTimer)
       clearInterval(randomTimer)
       el.removeAttribute(ATTR)
