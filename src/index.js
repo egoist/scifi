@@ -10,7 +10,13 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
   let finishedString = ''
 
   const finishedTimer = setInterval(() => {
-    finishedString += content[finishedString.length]
+    if (finishedString.length < content.length) {
+      finishedString += content[finishedString.length]
+    } else {
+      clearInterval(finishedTimer)
+      clearInterval(randomTimer)
+      el.removeAttribute(ATTR)
+    }
   }, delay)
 
   const randomTimer = setInterval(() => {
@@ -20,12 +26,6 @@ function scifi(el, { content, chars = '[en]', speed = 20, delay = 100 } = {}) {
       randomString += content[i + finishedString.length] === ' ' ? ' ' : getRandomChar(chars)
     }
     el.textContent = finishedString + randomString
-
-    if (finishedString.length === content.length) {
-      clearInterval(finishedTimer)
-      clearInterval(randomTimer)
-      el.removeAttribute(ATTR)
-    }
   }, speed)
 }
 
