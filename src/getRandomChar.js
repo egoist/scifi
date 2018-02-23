@@ -54,4 +54,12 @@ function getRandomChar(chars) {
   }
 }
 
-export default getRandomChar
+function getRandomChars(chars, count) {
+  let retChars = ''
+  for (let i = 0; i < count; i++) {
+    retChars += getRandomChar(chars)
+  }
+  return retChars
+}
+
+export default getRandomChars
