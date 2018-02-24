@@ -1,4 +1,4 @@
-import toScifiText from './getRandomChar'
+import toScifiText from './scifitext'
 
 const ATTR = 'data-scifing'
 
