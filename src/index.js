@@ -21,7 +21,7 @@ function scifi(el, { content, chars = '[en]', scifiSpeed = 20, exposeDelay = 100
   const scifiTimer = setInterval(() => {
     el.textContent = content.substr(0, exposePosition)
 
-    if(exposePosition < content.length) {
+    if (exposePosition < content.length) {
       el.textContent += toScifiText(chars, content.substr(exposePosition - content.length), keepChars)
     }
 
