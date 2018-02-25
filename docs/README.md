@@ -62,16 +62,24 @@ Default: `element.textContent`
 
 The final content to show.
 
-##### options.speed
+##### options.scifiSpeed
 
 Type: `number`<br>
 Default: `20`
 
 Shuffle speed.
 
-##### options.delay
+##### options.exposeDelay
 
 Type: `number`<br>
 Default: `100`
 
 Wait this amount of time to replace random char with actual char.
+
+##### options.keepChars
+
+Type: `array`<br>
+Default: `[' ']`
+
+Characters which should never be displayed as scifi text.
+
