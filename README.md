@@ -1,7 +1,7 @@
 
 # scifi
 
-[![NPM version](https://img.shields.io/npm/v/scifi.svg?style=flat)](https://npmjs.com/package/scifi) [![NPM downloads](https://img.shields.io/npm/dm/scifi.svg?style=flat)](https://npmjs.com/package/scifi) [![CircleCI](https://circleci.com/gh/egoist/scifi/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/scifi/tree/master)
+[![NPM version](https://img.shields.io/npm/v/scifi.svg?style=flat)](https://npmjs.com/package/scifi) [![NPM downloads](https://img.shields.io/npm/dm/scifi.svg?style=flat)](https://npmjs.com/package/scifi)
 
 
 ## Documentation
